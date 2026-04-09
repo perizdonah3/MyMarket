@@ -1,4 +1,4 @@
-package com.kennedy.markethub.ui.screens.home
+package com.periz.mymarket.ui.screens.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.horizontalScroll
@@ -41,12 +41,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.periz.mymarket.R
 import com.periz.mymarket.ui.theme.Pink40
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(){
+fun HomeScreen(navController: NavController){
 
     Column(
         modifier = Modifier.fillMaxSize()
@@ -163,7 +165,7 @@ fun HomeScreen(){
                 )
 
                 Text(
-                    text = "Groceries",
+                    text = "Shoes",
                     fontSize = 20.sp,
                     fontWeight = FontWeight.ExtraBold,
                     modifier = Modifier.padding(start = 20.dp)
@@ -223,26 +225,6 @@ fun HomeScreen(){
                 )
 
                 Text(
-                    text = "Electronics",
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.ExtraBold,
-                    modifier = Modifier.padding(start = 20.dp)
-                )
-            }
-
-            Spacer(modifier = Modifier.width(20.dp))
-
-
-            Column() {
-                Image(
-                    painter = painterResource(R.drawable.groceries),
-                    contentDescription = "electronics",
-                    modifier = Modifier.size(200.dp).clip(shape = RoundedCornerShape(20.dp)),
-                    contentScale = ContentScale.Crop
-
-                )
-
-                Text(
                     text = "Groceries",
                     fontSize = 20.sp,
                     fontWeight = FontWeight.ExtraBold,
@@ -255,8 +237,28 @@ fun HomeScreen(){
 
             Column() {
                 Image(
+                    painter = painterResource(R.drawable.shoes),
+                    contentDescription = "shoes",
+                    modifier = Modifier.size(200.dp).clip(shape = RoundedCornerShape(20.dp)),
+                    contentScale = ContentScale.Crop
+
+                )
+
+                Text(
+                    text = "Shoes",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.ExtraBold,
+                    modifier = Modifier.padding(start = 20.dp)
+                )
+            }
+
+            Spacer(modifier = Modifier.width(20.dp))
+
+
+            Column() {
+                Image(
                     painter = painterResource(R.drawable.clothes),
-                    contentDescription = "electronics",
+                    contentDescription = "clothes",
                     modifier = Modifier.size(200.dp).clip(shape = RoundedCornerShape(20.dp)),
                     contentScale = ContentScale.Crop
 
@@ -268,6 +270,8 @@ fun HomeScreen(){
                     fontWeight = FontWeight.ExtraBold,
                     modifier = Modifier.padding(start = 20.dp)
                 )
+
+
             }
 
 
@@ -319,6 +323,6 @@ fun HomeScreen(){
 @Composable
 fun HomeScreenPreview(){
 
-    HomeScreen()
+    HomeScreen(rememberNavController())
 
 }
