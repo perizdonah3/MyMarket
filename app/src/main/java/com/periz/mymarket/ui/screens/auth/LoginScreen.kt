@@ -37,14 +37,18 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.periz.mymarket.R
+import com.periz.mymarket.navigation.ROUT_REGISTER
 import com.periz.mymarket.ui.theme.Pink40
 import com.periz.mymarket.ui.theme.Pink80
 
 
 
 @Composable
-fun LoginScreen(){
+fun LoginScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .paint(painter = painterResource(R.drawable.backround), contentScale = ContentScale.FillBounds)
@@ -55,7 +59,7 @@ fun LoginScreen(){
     ) {
 
         Image(
-            painter = painterResource(R.drawable.backround),
+            painter = painterResource(R.drawable.product),
             contentDescription = "Register",
             modifier = Modifier.size(200.dp)
 
@@ -137,8 +141,11 @@ fun LoginScreen(){
         }
         Spacer(modifier = Modifier.height(10.dp))
 
-        TextButton(onClick = {}) {
+        TextButton(onClick = {navController.navigate(ROUT_REGISTER)}) {
             Text(text = " Don't have an account? Register with us now.")
+        }
+        TextButton(onClick = {navController.navigate(ROUT_REGISTER)}) {
+            Text(text = " Go To Home.")
         }
 
 
@@ -151,7 +158,8 @@ fun LoginScreen(){
 @Preview(showBackground = true)
 @Composable
 fun LoginScreenPreview(){
-    LoginScreen()
+    
+    LoginScreen(rememberNavController())
 
 
 }

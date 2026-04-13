@@ -38,11 +38,13 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.periz.mymarket.R
 import com.periz.mymarket.ui.theme.Pink80
 
 @Composable
-fun RegisterScreen(){
+fun RegisterScreen(navController: NavController){
     Column(
         modifier = Modifier
             .paint(painter = painterResource(   R.drawable.backround), contentScale = ContentScale.FillBounds)
@@ -210,7 +212,7 @@ fun RegisterScreen(){
 @Preview(showBackground = true)
 @Composable
 fun RegisterScreenPreview(){
-    RegisterScreen()
+    RegisterScreen(rememberNavController())
 
 
 }
