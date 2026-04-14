@@ -9,6 +9,7 @@ import com.periz.mymarket.ui.screens.Scaffold.ScaffoldScreen
 
 import com.periz.mymarket.ui.screens.about.AboutScreen
 import com.periz.mymarket.ui.screens.auth.LoginScreen
+import com.periz.mymarket.ui.screens.auth.RegisterScreen
 import com.periz.mymarket.ui.screens.home.HomeScreen
 import com.periz.mymarket.ui.screens.payment.PaymentScreen
 import com.periz.mymarket.ui.screens.service.ServiceScreen
@@ -21,7 +22,7 @@ import com.periz.mymarket.ui.screens.splash.SplashScreen
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_HOME // change if needed
+    startDestination: String = ROUT_REGISTER // change if needed
 ) {
 
     NavHost(
@@ -64,8 +65,9 @@ fun AppNavHost(
         composable(ROUT_SPLASH) {
             SplashScreen(navController)
         }
-        composable(ROUT_SCAFFOLD) {
-            ScaffoldScreen(navController)
+
+        composable(ROUT_REGISTER) {
+            RegisterScreen(navController)
         }
     }
 }

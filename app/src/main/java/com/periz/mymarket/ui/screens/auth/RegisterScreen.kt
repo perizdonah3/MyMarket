@@ -42,12 +42,13 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.periz.mymarket.R
 import com.periz.mymarket.ui.theme.Pink80
+import com.periz.mymarket.ui.theme.Purple80
 
 @Composable
 fun RegisterScreen(navController: NavController){
     Column(
         modifier = Modifier
-            .paint(painter = painterResource(   R.drawable.backround), contentScale = ContentScale.FillBounds)
+            .paint(painter = painterResource(   R.drawable.background3), contentScale = ContentScale.FillBounds)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
@@ -94,9 +95,9 @@ fun RegisterScreen(navController: NavController){
 
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             colors = OutlinedTextFieldDefaults.colors(
-                unfocusedBorderColor = Pink80,
+                unfocusedBorderColor = Purple80,
                 focusedBorderColor = Color.Black,
-                unfocusedLeadingIconColor = Pink80,
+                unfocusedLeadingIconColor = Purple80,
             )
 
         )
@@ -114,9 +115,9 @@ fun RegisterScreen(navController: NavController){
 
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             colors = OutlinedTextFieldDefaults.colors(
-                unfocusedBorderColor = Pink80,
+                unfocusedBorderColor = Purple80,
                 focusedBorderColor = Color.Black,
-                unfocusedLeadingIconColor = Pink80,
+                unfocusedLeadingIconColor = Purple80,
             )
 
         )
@@ -133,9 +134,9 @@ fun RegisterScreen(navController: NavController){
 
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             colors = OutlinedTextFieldDefaults.colors(
-                unfocusedBorderColor = Pink80,
+                unfocusedBorderColor = Purple80,
                 focusedBorderColor = Color.Black,
-                unfocusedLeadingIconColor = Pink80,
+                unfocusedLeadingIconColor = Purple80,
             ),
             visualTransformation = PasswordVisualTransformation()
 
@@ -153,9 +154,9 @@ fun RegisterScreen(navController: NavController){
 
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             colors = OutlinedTextFieldDefaults.colors(
-                unfocusedBorderColor = Pink80,
+                unfocusedBorderColor = Purple80,
                 focusedBorderColor = Color.Black,
-                unfocusedLeadingIconColor = Pink80,
+                unfocusedLeadingIconColor = Purple80,
             ),
             visualTransformation = PasswordVisualTransformation()
 
@@ -164,7 +165,7 @@ fun RegisterScreen(navController: NavController){
 
         Button(
             onClick = {},
-            colors = ButtonDefaults.buttonColors(   Pink80),
+            colors = ButtonDefaults.buttonColors(   Purple80),
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier.width(350.dp)
         )
