@@ -1,3 +1,4 @@
+
 package com.periz.mymarket.ui.screens.onboardingscreens
 
 import androidx.compose.foundation.Image
@@ -15,8 +16,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -29,123 +33,81 @@ import com.periz.mymarket.navigation.ROUT_REGISTER
 import com.periz.mymarket.ui.theme.Pink80
 
 @Composable
-fun OnboardingScreen(navController : NavController){
+fun OnBoardingScreen(navController: NavController){
+
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .paint(painter = painterResource(R.drawable.backround), contentScale = ContentScale.FillBounds)
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
-    ) {
+        verticalArrangement = Arrangement.Center
 
-        //Image
+    ){
+
         Image(
-            painter = painterResource(R.drawable.product),
-            contentDescription = "product",
-            modifier = Modifier.size(300.dp)
+            painter = painterResource(R.drawable.clothes),
+            contentDescription = "Product Image",
+            modifier = Modifier.size(200.dp),
         )
         Text(
-            text ="WELCOME TO MYMARKET",
-            fontSize = 30.sp,
-            fontWeight = FontWeight.Bold,
-            color = Color.Magenta,
-
-
-
-        )
-        Text(
-            text = "Shop Smarter",
+            text = "WELCOME TO MARKETHUB",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
+            color = Color.Black,
+            fontFamily = FontFamily.SansSerif
 
         )
+        Text(
+            text = "Shop Smarter,",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Black
+        )
+        Spacer(modifier = Modifier.height(5.dp))
 
         Text(
             text = "everywhere you go",
             fontSize = 20.sp,
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.Bold
+        )
+        Spacer(modifier = Modifier.height(5.dp))
 
-            )
         Text(
-            text = "Purpose: Provides a dedicated, user-friendly, and secure mobile-first shopping experience compared to a standard website.",
-            fontSize = 20.sp,
-            fontWeight = FontWeight.Bold,
-            textAlign = TextAlign.Center,
+            text = "This is an online platform that allows businesses to sell products or services directly to consumers , other businesses or via marketplaces",
+            fontSize = 15.sp,
+            textAlign = TextAlign.Center
+        )
+        Spacer(modifier = Modifier.height(5.dp))
 
-            )
-        Spacer(modifier = Modifier.height(20.dp))
-        Button(onClick = {navController.navigate(ROUT_REGISTER)},
+        Button(
+            onClick = { navController.navigate(ROUT_REGISTER) },
             colors = ButtonDefaults.buttonColors(Pink80),
             shape = RoundedCornerShape(10.dp),
-            modifier = Modifier.width(350.dp)
-
-
-        ) {
+            modifier = Modifier.width(330.dp)
+        ){
             Text(text = "Get Started")
+
         }
 
 
 
 
 
-
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
     }
 
 
 
 
+
 }
-@Preview(showBackground = true)
+
+@Preview(showBackground =true )
 @Composable
-fun OnboardingScreenPreview(){
-    OnboardingScreen(rememberNavController())
+fun OnBoardingScreenPreview(){
+    OnBoardingScreen(rememberNavController())
+
+
+
+
 
 }

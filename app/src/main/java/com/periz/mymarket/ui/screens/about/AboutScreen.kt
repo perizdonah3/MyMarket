@@ -4,9 +4,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.Notifications
-import androidx.compose.material.icons.filled.Share
-import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -21,7 +18,6 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.periz.mymarket.ui.theme.Pink40
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AboutScreen(navController: NavController){
@@ -30,18 +26,21 @@ fun AboutScreen(navController: NavController){
         modifier = Modifier.fillMaxSize()
     ) {
 
-
         TopAppBar(
-            title ={ Text(text = "about")},
+            title = { Text(text = "About") },
+
             navigationIcon = {
                 IconButton(
-                    onClick = {}) {
+                    onClick = {
+                        // Example: navController.navigate("home")
+                    }
+                ) {
                     Icon(
                         imageVector = Icons.Default.Menu,
                         contentDescription = "Menu"
-                    ) }
+                    )
+                }
             },
-
 
             colors = TopAppBarDefaults.topAppBarColors(
                 containerColor = Pink40,
@@ -49,50 +48,12 @@ fun AboutScreen(navController: NavController){
                 titleContentColor = Color.White,
                 actionIconContentColor = Color.White,
             )
-
-
         )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
 }
-
 
 @Preview(showBackground = true)
 @Composable
 fun AboutScreenPreview(){
-
     AboutScreen(rememberNavController())
-
 }
