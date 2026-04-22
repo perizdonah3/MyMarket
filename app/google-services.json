@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "490255776478",
+    "project_id": "mymarket-df5e3",
+    "storage_bucket": "mymarket-df5e3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490255776478:android:1bb853c789a701da26204f",
+        "android_client_info": {
+          "package_name": "com.periz.mymarket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdBhzHeTilwt5jUwyeJSV5vUeGg9xYc7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

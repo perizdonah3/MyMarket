@@ -51,7 +51,6 @@ import com.periz.mymarket.ui.theme.Pink80
 fun LoginScreen(navController: NavController) {
     Column(
         modifier = Modifier
-            .paint(painter = painterResource(R.drawable.backround), contentScale = ContentScale.FillBounds)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center

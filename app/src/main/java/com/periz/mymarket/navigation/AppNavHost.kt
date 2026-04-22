@@ -22,7 +22,7 @@ import com.periz.mymarket.ui.screens.splash.SplashScreen
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_REGISTER // change if needed
+    startDestination: String = ROUT_SPLASH // change if needed
 ) {
 
     NavHost(

@@ -1,5 +1,6 @@
 package com.periz.mymarket.ui.screens.auth
 
+import android.content.Context
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -28,9 +29,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -48,15 +51,15 @@ import com.periz.mymarket.ui.theme.Purple80
 fun RegisterScreen(navController: NavController){
     Column(
         modifier = Modifier
-            .paint(painter = painterResource(   R.drawable.background3), contentScale = ContentScale.FillBounds)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
         Image(
             painter = painterResource(R.drawable.product),
-            contentDescription = "Register",
-            modifier = Modifier.size(200.dp)
+            contentDescription = "",
+            modifier = Modifier.size(200.dp).clip(shape = RoundedCornerShape(20.dp)),
+            contentScale = ContentScale.Crop
 
         )
 
@@ -70,7 +73,7 @@ fun RegisterScreen(navController: NavController){
 
 
         Text(
-            text = "Join us and start your journey today",
+            text = "Join Us And Start Your Journey Today",
             fontSize = 20.sp,
             fontWeight = FontWeight.ExtraBold,
         )
@@ -162,6 +165,8 @@ fun RegisterScreen(navController: NavController){
 
         )
         Spacer(modifier = Modifier.height(10.dp))
+        val context = LocalContext.current
+        val authViewModel = AuthViewModel(navController, context)
 
         Button(
             onClick = {},
@@ -210,6 +215,12 @@ fun RegisterScreen(navController: NavController){
 
 
 }
+
+@Composable
+fun AuthViewModel(x0: NavController, x1: Context,) {
+
+}
+
 @Preview(showBackground = true)
 @Composable
 fun RegisterScreenPreview(){
