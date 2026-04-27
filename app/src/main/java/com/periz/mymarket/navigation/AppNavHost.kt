@@ -4,7 +4,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.*
+import androidx.navigation.navArgument
+import com.periz.mymarket.navigation.ROUT_VIEW_PRODUCT
+import com.periz.mymarket.ui.screens.Intent.IntentScreen
 import com.periz.mymarket.ui.screens.Scaffold.ScaffoldScreen
 
 import com.periz.mymarket.ui.screens.about.AboutScreen
@@ -12,6 +16,7 @@ import com.periz.mymarket.ui.screens.auth.LoginScreen
 import com.periz.mymarket.ui.screens.auth.RegisterScreen
 import com.periz.mymarket.ui.screens.home.HomeScreen
 import com.periz.mymarket.ui.screens.payment.PaymentScreen
+import com.periz.mymarket.ui.screens.product.AddProductScreen
 import com.periz.mymarket.ui.screens.service.ServiceScreen
 import com.periz.mymarket.ui.screens.splash.SplashScreen
 
@@ -66,8 +71,17 @@ fun AppNavHost(
             SplashScreen(navController)
         }
 
+
         composable(ROUT_REGISTER) {
             RegisterScreen(navController)
         }
-    }
-}
+        composable(ROUT_ADD_PRODUCT) {
+            AddProductScreen(navController)
+        }
+        composable(ROUT_INTENT) {
+            IntentScreen(navController)
+        }
+
+
+}}
+

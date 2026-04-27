@@ -31,6 +31,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import androidx.navigation.NavUri
 import androidx.navigation.compose.rememberNavController
 import com.periz.mymarket.ui.theme.Pink40
@@ -39,7 +40,7 @@ import com.periz.mymarket.ui.theme.Pink80
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ServiceScreen(navController : NavController){
+fun IntentScreen(navController : NavController){
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -284,7 +285,7 @@ fun ServiceScreen(navController : NavController){
 
 @Preview(showBackground = true)
 @Composable
-fun ServiceScreenPreview() {
-    ServiceScreen(rememberNavController())
+fun IntentScreenPreview() {
+    IntentScreen(rememberNavController())
 
 }

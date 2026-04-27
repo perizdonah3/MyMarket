@@ -10,7 +10,14 @@ const val  ROUT_PAYMENT ="payment"
 const val  ROUT_SERVICE ="service"
 const val  ROUT_INTENT ="intent"
 const val  ROUT_SPLASH ="splash"
-const val  ROUT_SCAFFOLD ="scaffold"
+
+const val  ROUT_ADD_PRODUCT ="AddProduct"
+
+const val  ROUT_UPDATE_PRODUCT ="UpdateProduct"
+
+const val  ROUT_VIEW_PRODUCT ="ViewProduct"
+
+
 
 
 
